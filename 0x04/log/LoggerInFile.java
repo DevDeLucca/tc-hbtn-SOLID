@@ -5,24 +5,21 @@ import java.util.logging.SimpleFormatter;
 
 public class Exemple {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Logger logger = Logger.getLogger("MyLog");
 
-        FileHandler fileHandler;
+        FileHandler fileHandler = new FileHandler("logs.txt");
 
-        fileHandler = new FileHandler("logs.txt");
+        logger.addHandler(fileHandler);
 
-        Logger.AddHandler(fileHandler);
-
-        simpleFormatter simpleFormatter = new SimpleFormatter();
+        SimpleFormatter simpleFormatter = new SimpleFormatter();
 
         fileHandler.setFormatter(simpleFormatter);
 
-        Logger.info("Log test");
+        logger.info("Log test");
 
-        Logger.info("Hi In the main class test");
+        logger.info("Hi In the main class test");
 
     }
-
 }
