@@ -1,7 +1,8 @@
 public class Name {
     public Date modifiedDate;
     
-    public Date d;
+     public Date modifiedDate;
+    public List<Testcase> findAllTestcasesByUser(Name.User user){};
 
     public List<Account> AccountList;
 
