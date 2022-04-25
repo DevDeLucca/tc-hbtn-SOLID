@@ -13,6 +13,4 @@ class UsersModels {
     public AllUsers() {return [];}
     
 
-    public GetUsers() {return [];}
-
 }
