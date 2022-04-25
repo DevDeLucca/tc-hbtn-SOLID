@@ -9,8 +9,8 @@ public class Functions {
     
     @PostMapping("/user")
     public User saveUser(User user){
-        return userService.userRepository.save(user);
-    }   
+        return userService.save(user);
+    }
     public void saveUser(User user){};
 
     public User saveUser(User user){
